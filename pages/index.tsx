@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { useRef } from "react";
 
-import { Container, Input } from "@chakra-ui/react";
+import { Container, Input, Stack } from "@chakra-ui/react";
 
 import styles from "../styles/Home.module.css";
 import DynamicText from "../components/DynamicText";
@@ -22,8 +22,10 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <DynamicText ref={dynamicTextRef} />
-        <Input onChange={onChange} />
+        <Stack>
+          <DynamicText ref={dynamicTextRef} />
+          <Input onChange={onChange} />
+        </Stack>
       </main>
     </Container>
   );
